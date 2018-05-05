@@ -30,8 +30,7 @@
             <label for="sinopsis">Sinopsis Buku</label>
             <p>{{$dokumen->sinopsis}}</p>
         </div>
-
-<div class="col s6">
+        <div class="col s6">
         <div class="col s3">
           <table class="striped responsive-table highlight">
             <thead>
