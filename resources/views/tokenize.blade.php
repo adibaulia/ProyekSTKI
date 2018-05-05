@@ -18,7 +18,7 @@
       <div class="row">
         <div class="col s12 center">
           <div class="icon-block">
-            <h5>Tokenize</h5>
+            <h5>Tokenize + Stop Words Removal</h5>
           </div>
         </div>
       </div>
