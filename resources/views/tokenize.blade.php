@@ -13,33 +13,36 @@
 <body>
     <div class="section">
 
-    <form class="" action="/tokenizing" method="post">
-        @csrf
+      <form class="" action="/tokenizing" method="post">
       <!--   Icon Section   -->
           <div class="row">
             <div class="col s12 center">
               <div class="icon-block">
-                <h5>Pengkategorian Buku Berdasarkan Sinopsis menggunakan Stemming Tala</h5>
+                <h5>Tokenize</h5>
               </div>
             </div>
           </div>
           <div class="row">
-            <div class="input-field col s6 offset-s3">
-              <input name="judul_buku" id="judul_buku" type="text" class="validate">
-              <label for="judul_buku">Judul Buku</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col s6 offset-s3 input-field">
-                <textarea name="sinopsis" id="sinopsis" type="text" class="materialize-textarea"></textarea>
-                <label for="sinopsis">Sinopsis Buku</label>
-            </div>
-          </div>
-          <div class="row">
             <div class="col s6 offset-s3">
-              <a href="tokenizing"><button class="btn waves-effect waves-light" type="submit" name="action">Submit
-                <i class="material-icons right">send</i>
-              </button></a>
+              <table class="striped responsive-table highlight">
+                <thead>
+                  <tr>
+                      <th>Kode Dokumen</th>
+                      <th>Kata/Token</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  @for ($i=0; $i < 10; $i++)
+                    <tr>
+                      <td>Alvin</td>
+                      <td>Eclair</td>
+                    </tr>
+                  @endfor
+
+
+                </tbody>
+              </table>
             </div>
           </div>
         </form>
