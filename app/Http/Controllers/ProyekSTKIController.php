@@ -15,7 +15,7 @@ class ProyekSTKIController extends Controller
 
   public function getFinalTokens()
   {
-    return" $this->finalTokens";
+    return $this->finalTokens;
   }
 
   public function tokenizing(Request $request)
@@ -28,7 +28,7 @@ class ProyekSTKIController extends Controller
     $docstop=preg_replace('/\b('.implode('|',$stopWords->getStopWordsFromLanguage('id')).')\b/','',$tokens); //ngilangi stopword
     $finalToken=array_filter(preg_replace("/[^a-zA-Z]+/", "",$docstop));//ngilangi angka karo tanda baca (punctuation) + array yang kosong
     //dd();
-    $this->setFinalTokens(array_count_values($finalToken));
+    $this->setFinalTokens(array_count_values($finalToken));//ngitung TF gawe array count values
     dd($this->getFinalTokens());
     return view('tokenize')->with('dokumen', $request)->with('token', $finalToken);
   }
