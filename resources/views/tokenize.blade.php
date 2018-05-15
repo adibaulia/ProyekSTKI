@@ -24,14 +24,15 @@
       </div>
 
       <div class="row">
-        <div class="col s6" style="text-align: justify; text-justify: inter-word;">
+        <div class="col s8" style="text-align: justify; text-justify: inter-word;">
           <label for="judul_buku">Judul Buku</label>
           <p>{{$dokumen->judul_buku}}</p>
             <label for="sinopsis">Sinopsis Buku</label>
             <p>{{$dokumen->sinopsis}}</p>
         </div>
-        <div class="col s6">
-        <div class="col s3">
+        <div class="col s4"><br>
+		<h6>Klasifikasi Buku : {{$final}}</h6>
+        {{--- <div class="col s3">
           <table class="striped responsive-table highlight">
             <thead>
               <tr>
@@ -41,7 +42,7 @@
             </thead>
 
             <tbody>
-              @foreach ($token as $tokens)
+            @foreach ($token as $tokens)
               <tr>
                 <td>1</td>
                 <td>{{$tokens}}</td>
@@ -49,7 +50,7 @@
             @endforeach
             </tbody>
           </table>
-        </div>
+        </div> ---}}
       </div>
   </div>
   </div>
